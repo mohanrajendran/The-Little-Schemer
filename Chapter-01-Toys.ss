@@ -135,13 +135,13 @@
 ;; Atom
 ;;
 ;
-; 'Harry is an atom because its a string of characters beginning with a letter
-;
 ;Defintion:-
 (define atom?
   (lambda (x)
     (and (not (pair? x)) (not (null? x)))))
 
+;
+; 'Harry is an atom because its a string of characters beginning with a letter
 (atom? 'Harry)                        ;#t
 (atom? '(Harry had a heap of apples)) ;#f
 ;
