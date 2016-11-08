@@ -352,15 +352,15 @@
 ; evaluated lazily.
 ;
 ; Now lets abstract out the inner (mk-length mk-length)
-((lambda (mk-length)
-   (mk-length mk-length))
- (lambda (mk-length)
-   ((lambda (length)
-      (lambda (l)
-        (cond
-          ((null? l) 0)
-          (else (add1 (length (cdr l)))))))
-    (mk-length mk-length))))
+; ((lambda (mk-length)
+;    (mk-length mk-length))
+;  (lambda (mk-length)
+;    ((lambda (length)
+;       (lambda (l)
+;         (cond
+;           ((null? l) 0)
+;           (else (add1 (length (cdr l)))))))
+;     (mk-length mk-length))))
 ;
 ; This obviously will not work, because the inner (mk-length mk-length) is always eagerly evaluated. Thus, it will never end.
 ;
